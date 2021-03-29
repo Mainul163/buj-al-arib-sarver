@@ -6,7 +6,7 @@ const admin = require('firebase-admin');
 require('dotenv').config()
 
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.am1je.mongodb.net/databasebuj?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.am1je.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 var app = express()
 
