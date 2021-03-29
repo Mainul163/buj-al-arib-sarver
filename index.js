@@ -22,7 +22,8 @@ app.use(cors())
 
 var serviceAccount = require("./configs/buj-al-arib-firebase-adminsdk-hhsxb-b7e1643d25.json");
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert(serviceAccount),  
+ 
 });
 
 
@@ -84,4 +85,4 @@ client.connect(err => {
 
 
 
-app.listen(5000)
+app.listen(process.env.PORT|| 5000)
